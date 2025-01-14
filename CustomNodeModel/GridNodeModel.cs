@@ -20,49 +20,46 @@ namespace CustomNodeProject.CustomNodeModel
 
     public class GridNodeModel : NodeModel
     {
-        private double _sliderValue;
+        
         private double _minimum = 0.0;
         private double _maximum = 0.0;
+        private double _sliderValue;
+
         public double SliderValue
         {
             get { return _sliderValue; }
             set
             {
-                //_sliderValue = value;
-                //RaisePropertyChanged("SliderValue");
-                //OnNodeModified(false);
-                if (_sliderValue != value)
-                {
-                    _sliderValue = value;
-                    RaisePropertyChanged(nameof(SliderValue));
-                    OnNodeModified(true);
-                }
+                _sliderValue = value;
+                RaisePropertyChanged("SliderValue");
+                OnNodeModified(false);
             }
         }
-        public double Minimum
-        {
-            get => _minimum;
-            set
-            {
-                if (_minimum != value)
-                {
-                    _minimum = value;
-                    RaisePropertyChanged(nameof(Minimum));
-                }
-            }
-        }
-        public double Maximum
-        {
-            get => _maximum;
-            set
-            {
-                if (_maximum != value)
-                {
-                    _maximum = value;
-                    RaisePropertyChanged(nameof(Maximum));
-                }
-            }
-        }
+
+        //public double Minimum
+        //{
+        //    get => _minimum;
+        //    set
+        //    {
+        //        if (_minimum != value)
+        //        {
+        //            _minimum = value;
+        //            RaisePropertyChanged(nameof(Minimum));
+        //        }
+        //    }
+        //}
+        //public double Maximum
+        //{
+        //    get => _maximum;
+        //    set
+        //    {
+        //        if (_maximum != value)
+        //        {
+        //            _maximum = value;
+        //            RaisePropertyChanged(nameof(Maximum));
+        //        }
+        //    }
+        //}
         public GridNodeModel()
         {
             RegisterAllPorts();

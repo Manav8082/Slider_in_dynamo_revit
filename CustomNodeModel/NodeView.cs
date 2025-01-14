@@ -17,21 +17,9 @@ namespace CustomNodeProject.CustomNodeModel
             //var slider = new Slider();
             //nodeView.inputGrid.Children.Add(slider);
             //slider.DataContext = model;
-            var slider = new slider
-            {
-                Width = 100,
-                VerticalAlignment=VerticalAlignment.Center
-            };
-
-            // Bind the slider's Value to the SliderValue property of the model
-            Binding binding = new Binding("SliderValue")
-            {
-                Source = model,
-                Mode = BindingMode.TwoWay // Ensure two-way binding
-            };
-            slider.SetBinding(Slider.ValueProperty, binding);
-
-            nodeView.inputGrid.Children.Add(slider);
+            var ui = new slider();
+            nodeView.inputGrid.Children.Add(ui);
+            ui.DataContext = model;
         }
 
         public void Dispose()
