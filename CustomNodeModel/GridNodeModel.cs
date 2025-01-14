@@ -21,8 +21,6 @@ namespace CustomNodeProject.CustomNodeModel
     public class GridNodeModel : NodeModel
     {
         
-        private double _minimum = 0.0;
-        private double _maximum = 0.0;
         private double _sliderValue;
 
         public double SliderValue
@@ -35,31 +33,6 @@ namespace CustomNodeProject.CustomNodeModel
                 OnNodeModified(false);
             }
         }
-
-        //public double Minimum
-        //{
-        //    get => _minimum;
-        //    set
-        //    {
-        //        if (_minimum != value)
-        //        {
-        //            _minimum = value;
-        //            RaisePropertyChanged(nameof(Minimum));
-        //        }
-        //    }
-        //}
-        //public double Maximum
-        //{
-        //    get => _maximum;
-        //    set
-        //    {
-        //        if (_maximum != value)
-        //        {
-        //            _maximum = value;
-        //            RaisePropertyChanged(nameof(Maximum));
-        //        }
-        //    }
-        //}
         public GridNodeModel()
         {
             RegisterAllPorts();
